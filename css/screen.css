@@ -166,10 +166,13 @@ ul.posts {
   }
 
   #post code {
-    border: 1px solid #ddd;
-    background-color: #eef;
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
     font-size: 85%;
-    padding: 0 .2em;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
   }
 
     #post pre code {
