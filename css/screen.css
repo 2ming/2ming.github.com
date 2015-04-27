@@ -166,9 +166,7 @@ ul.posts {
   }
 
   #post code {
-    padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding: 0.5em;
     margin: 0;
     font-size: 85%;
     background-color: rgba(0,0,0,0.04);
