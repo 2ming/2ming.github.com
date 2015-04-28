@@ -81,15 +81,18 @@ ul.posts {
 .site {
   font-size: 110%;
   text-align: justify;
-  width: 40em;
-  margin: 3em auto 2em auto;
+  /* width: 40em; */
+  /* margin: 3em auto 2em auto; */
   line-height: 1.5em;
+  /* float: left; */
+  margin-left: 260px;
 }
 
 .title {
   color: #a00;
   font-weight: bold;
   margin-bottom: 2em;
+  margin-top: 2em;
 }
 
   .site .title a {
@@ -196,3 +199,12 @@ ul.posts {
   #related h2 {
     margin-bottom: 1em;
   }
+  .author-side{
+    width: 140px;
+    padding: 60px;
+    float: left;
+  }
+.author-side img{
+  width: 100%;
+  border-radius: 50%;
+}
