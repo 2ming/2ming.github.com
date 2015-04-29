@@ -345,3 +345,6 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+.duoshuo{
+  max-width: 800px;
+}
