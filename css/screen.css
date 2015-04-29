@@ -349,9 +349,7 @@ pre[class*="language-"] {
   max-width: 800px;
 }
 
-.author-side img:hover {
-
-
+.author-side:hover {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
