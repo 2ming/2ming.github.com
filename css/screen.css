@@ -158,8 +158,7 @@ ul.posts {
 
   #post pre {
     border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .4em;
+    padding: .8em;
     max-width: 800px;
   }
 
