@@ -16,7 +16,7 @@ title: javascript闭包（closure）
 
 假如你直接在函数外面定义一个变量，函数是可以直接访问这个变量的。
 
-<pre>
+<pre class="language-javascript">
 var a = 0;
     d = 4;
 
@@ -55,7 +55,7 @@ console.log(d)//4 //函数demo2没有改变全局变量的值
 
 那么问题来了，如何读取到函数的局部变量呢？？
 
-<pre>
+<pre class="language-javascript">
 	function demo(){
 	var a = 111;
 	
@@ -84,7 +84,7 @@ var d = demo();
 
 听起来是不是感觉很吊的样子，其实也就那个样子...
 
-<pre>
+<pre class="language-javascript">
 function d1(){
 	var a = 111;
 	
