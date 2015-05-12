@@ -23,7 +23,7 @@ b //1
 let 只在声明的代码块中生效
 
 <pre class="language-javascript">
-
+//var 变量声明
 var a = [];
 for(var i = 0;i<10;i++){
 	a[i] = function(){
@@ -35,7 +35,7 @@ a[6](); //10
 </pre>
 
 <pre class="language-javascript">
-
+//闭包方法
 var a = [];
 for(var i = 0;i<10;i++){
 	a[i] = (function(i){
@@ -49,7 +49,7 @@ a[6](); //6
 </pre>
 
 <pre class="language-javascript">
-
+//let 声明
 var a = [];
 for(let i = 0;i<10;i++){
 	a[i] = function(){
