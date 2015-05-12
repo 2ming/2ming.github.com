@@ -1,6 +1,6 @@
 ---
 layout: post
-title: svn命令笔记
+title: ECMAScript 6 笔记（一）
 ---
 
 {{ page.title }}
