@@ -45,7 +45,7 @@ function f(x,y,z){
 f(1,2);
 </pre>
 
-<b>Array 数组<b>
+<b>Array 数组</b>
 
 方法 
 
