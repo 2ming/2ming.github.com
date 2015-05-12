@@ -56,6 +56,7 @@ var a = [1,2,3];
 var b = a.concat(4,5);
 console.log(a) //[1,2,3]
 console.log(b) //[1,2,3,4,5]
+</pre>
 
 Array.every() 测试断言函数是否对每个元素为真
 
@@ -84,6 +85,7 @@ a.forEach(function(x,i,a){
 //2 1 [2, 3, 3]
 //3 2 [2, 3, 4]
 </pre>
+
 Array.indexOf() 查找数组
 
 返回匹配元素的位置，不匹配则返回-1
