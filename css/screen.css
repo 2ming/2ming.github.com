@@ -85,7 +85,7 @@ ul.posts {
   /* margin: 3em auto 2em auto; */
   line-height: 1.5em;
   /* float: left; */
-  margin-left: 260px;
+  margin:20px 0 0 280px;
 }
 
 .title {
@@ -195,13 +195,16 @@ ul.posts {
   margin-top: 2em;
 }
 
-  #related h2 {
+#related h2 {
     margin-bottom: 1em;
-  }
-  .author-side{
+}
+.author-side{
     width: 140px;
     padding: 60px;
-    float: left;
+    position: fixed;
+    height: 100%;
+    border-left: 1px solid #f5f5f5;
+    top: 0;
   }
 .author-side img{
   width: 100%;
@@ -218,7 +221,6 @@ ul.posts {
   color:#999;
 }
 .main{
-  padding-top: 20px;
 }
 
 /**
