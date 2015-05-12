@@ -10,7 +10,7 @@ title: Javascript权威指南核心参考笔记（一）
 
 核心参考笔记很长，我会分多个部分来记录。
 
-arguments[] 函数参数数组
+<b>arguments[]</b> 函数参数数组
 
 arguments.callee 指当前正在执行的函数(通过它可以引用匿名函数自身)
 
