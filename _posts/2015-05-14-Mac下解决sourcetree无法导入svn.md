@@ -52,7 +52,7 @@ Completed with errors, see above
 
 这里要注意一个问题，看你的报错/Library/Perl/5.18 
 
-<img src="//wanggao421.github.com/images/20150514/1.png" alt="xcode">
+<img src="//wanggao421.github.com/images/20150514/2.png" alt="错误提示">
 
 如果你的路径不是5.18 那么上面执行命令的时候把5.18／5.18.2改成你相对应上图红色标注的文件名
 
