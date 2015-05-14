@@ -9,15 +9,21 @@ title: mac下解决souretree无法导入svn
 <p class="meta">14 May 2015 - mac下解决souretree无法导入svn</p>
 
 <pre class="language-javascript">
-	Can't locate loadable object for module SVN::_Core in @INC (@INC contains: /usr/local/git/lib/perl5/site_perl /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2 /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl /Library/Perl/5.18/darwin-thread-multi-2level /Library/Perl/5.18 /Network/Library/Perl/5.18/darwin-thread-multi-2level /Network/Library/Perl/5.18 /Library/Perl/Updates/5.18.2 /System/Library/Perl/5.18/darwin-thread-multi-2level /System/Library/Perl/5.18 /System/Library/Perl/Extras/5.18/darwin-thread-multi-2level /System/Library/Perl/Extras/5.18 .) at /System/Library/Perl/Extras/5.18/SVN/Base.pm line 59.
-	BEGIN failed--compilation aborted at /System/Library/Perl/Extras/5.18/SVN/Core.pm line 5.
-	Compilation failed in require at /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/Git/SVN/Utils.pm line 6.
-	BEGIN failed--compilation aborted at /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/Git/SVN/Utils.pm line 6.
-	Compilation failed in require at /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/Git/SVN.pm line 26.
-	BEGIN failed--compilation aborted at /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/Git/SVN.pm line 33.
-	Compilation failed in require at /Applications/SourceTree.app/Contents/Resources/git_local/libexec/git-core/git-svn line 25.
-	BEGIN failed--compilation aborted at /Applications/SourceTree.app/Contents/Resources/git_local/libexec/git-core/git-svn line 25.
-	Completed with errors, see above
+Can't locate loadable object for module SVN::_Core in @INC (@INC contains: /usr/local/git/lib/perl5/site_perl /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2 /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl /Library/Perl/5.18/darwin-thread-multi-2level /Library/Perl/5.18 /Network/Library/Perl/5.18/darwin-thread-multi-2level /Network/Library/Perl/5.18 /Library/Perl/Updates/5.18.2 /System/Library/Perl/5.18/darwin-thread-multi-2level /System/Library/Perl/5.18 /System/Library/Perl/Extras/5.18/darwin-thread-multi-2level /System/Library/Perl/Extras/5.18 .) at /System/Library/Perl/Extras/5.18/SVN/Base.pm line 59.
+
+BEGIN failed--compilation aborted at /System/Library/Perl/Extras/5.18/SVN/Core.pm line 5.
+Compilation failed in require at /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/Git/SVN/Utils.pm line 6.
+
+BEGIN failed--compilation aborted at /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/Git/SVN/Utils.pm line 6.
+
+Compilation failed in require at /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/Git/SVN.pm line 26.
+
+BEGIN failed--compilation aborted at /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/Git/SVN.pm line 33.
+
+Compilation failed in require at /Applications/SourceTree.app/Contents/Resources/git_local/libexec/git-core/git-svn line 25.
+
+BEGIN failed--compilation aborted at /Applications/SourceTree.app/Contents/Resources/git_local/libexec/git-core/git-svn line 25.
+Completed with errors, see above
 </pre>
 
 首先确认是否安装过 CommandLineTools
@@ -34,15 +40,15 @@ title: mac下解决souretree无法导入svn
 
 如果是单独安装的，执行如下命令：
 
-<pre class="language-javascript"> sudo ln -s /Library/Developer/CommandLineTools/Library/Perl/5.18/darwin-thread-multi-2level/auto/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level/auto/</pre>
+<pre class="language-javascript">sudo ln -s /Library/Developer/CommandLineTools/Library/Perl/5.18/darwin-thread-multi-2level/auto/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level/auto/</pre>
 
-<pre class="language-javascript"> sudo ln -s /Library/Developer/CommandLineTools/Library/Perl/5.18/darwin-thread-multi-2level/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.16.2/darwin-thread-multi-2level/</pre>
+<pre class="language-javascript">sudo ln -s /Library/Developer/CommandLineTools/Library/Perl/5.18/darwin-thread-multi-2level/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.16.2/darwin-thread-multi-2level/</pre>
 
 如果是通过Xcode安装的，执行：
 
-<pre class="language-javascript"> ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.18/darwin-thread-multi-2level/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level/</pre>
+<pre class="language-javascript">ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.18/darwin-thread-multi-2level/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level/</pre>
 
-<pre class="language-javascript"> ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.16/darwin-thread-multi-2level/auto/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level/auto/</pre>
+<pre class="language-javascript">ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.16/darwin-thread-multi-2level/auto/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level/auto/</pre>
 
 这里要注意一个问题，看你的报错/Library/Perl/5.18 
 

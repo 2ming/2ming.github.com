@@ -160,6 +160,7 @@ ul.posts {
     border: 1px solid #ddd;
     padding: .8em;
     max-width: 800px;
+    word-break: break-word;
   }
 
   #post ul,
