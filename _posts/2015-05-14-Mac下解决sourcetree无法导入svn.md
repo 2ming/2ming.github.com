@@ -36,7 +36,7 @@ Completed with errors, see above
 
 选择“安装”，然后同意安装协议，等待完成
 
-[参考网址](http://blog.csdn.net/sqc3375177/article/details/23662755)
+[参考网址1](http://blog.csdn.net/sqc3375177/article/details/23662755)
 
 如果是单独安装的，执行如下命令：
 
@@ -49,6 +49,8 @@ Completed with errors, see above
 <pre class="language-javascript">ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.18/darwin-thread-multi-2level/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level/</pre>
 
 <pre class="language-javascript">ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.16/darwin-thread-multi-2level/auto/SVN /Applications/SourceTree.app/Contents/Resources/git_local/lib/perl5/site_perl/5.18.2/darwin-thread-multi-2level/auto/</pre>
+
+[参考网址2](http://blog.bruceding.com/174.html?utm_source=rss)
 
 这里要注意一个问题，看你的报错/Library/Perl/5.18 
 
