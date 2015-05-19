@@ -115,6 +115,21 @@ var s = a.join("+"); //s = "1+2+3+ming";
 [1,2,3].map(function(x){return x*x}); //[1,4,9]
 </pre>
 
+<b>Array.pop()</b> 移除并返回数组的最好一个元素
+
+<pre class="language-javascript">
+var stack = [1,2,3];
+var arr2 = [];
+stack.pop(); //stack:[1,2] 返回: 3
+arr2.pop(); //stack:[] 返回：undefined
+</pre>
+
+<b>Array.push</b> 给数组追加元素，返回新数组长度
+
+<pre class="language-javascript">
+var stack = [1,2];
+stack.push(3,4) //stack:[1,2,3,4] 返回：4
+</pre>
 
 
 
