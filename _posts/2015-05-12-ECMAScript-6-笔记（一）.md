@@ -63,3 +63,29 @@ a[6](); //6
 我们看上面的代码，a[6]返回6才是我们想要的值。
 
 如果是以前，我们可能要利用闭包才能得到我们想要的值。而let出现后，代码变得简单，也更加的清晰。
+
+<h2>赋值</h2>
+
+<pre class="language-javascript">
+var [a,b,c] = [1,2,3];
+[x, y] = [y, x]//交换变量
+function example(){
+	reutrn {
+	foo:'foo'
+	bar:'bar'
+	}
+}
+var {foo,bar} = example();
+</pre>
+
+<h2>es6 字符串扩展</h2>
+
+下面列出扩展函数，相对应的可以百度或者文档，了解具体的用法
+
+codePointAt();
+
+fromCharCode();
+
+at();
+
+待续...
