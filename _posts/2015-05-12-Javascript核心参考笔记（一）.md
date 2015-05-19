@@ -131,6 +131,37 @@ var stack = [1,2];
 stack.push(3,4) //stack:[1,2,3,4] 返回：4
 </pre>
 
+<b>Array.reduce</b> 从数组元素中计算出一个新值，返回计算后的值
+
+<pre class="language-javascript">
+var stack = [1,2];
+stack.reduce(function(x,y){console.log(x,y); return x*y},9) //返回：216
+/*计算过程
+*9 1
+*9 2
+*18 3
+*54 4
+*216
+*/
+</pre>
+
+<b>Array.reduceRight</b> 从右到左缩减数组，返回计算后的值，用法同上
+
+<b>Array.reverse()</b> 颠倒数组中的元素顺序
+
+<pre class="language-javascript">
+var stack = [1,2,3];
+stack.reverse(); //stack:[3,2,1]
+</pre>
+
+<b>Array.shift()</b> 移除数组的第一个元素，返回被移除的元素
+
+<pre class="language-javascript">
+var stack = [1,2,3];
+stack.shift(); //stack:[2,3] 返回：1
+</pre>
+
+
 
 
 
