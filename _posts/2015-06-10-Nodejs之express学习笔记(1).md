@@ -28,13 +28,19 @@ title: Nodejs之express学习笔记（1）
 下面代码，是我根据express示例里面auth文件，然后自己学习写的。
 
 首先思路，要实现都功能。
+
 1.输入用户名、密码，验证用户名、密码是否正确。
 
 知道功能后，我们开始着手写代码
+
 1.导入相应都模块
+
 2.初始化
+
 3.把view表单文件写好
+
 4.绑定端口，输入地址时，显示相关的页面
+
 5.提交表单，提交的内容，跟密钥进行匹配，根据提交的信息做相关的处理
 
 <pre class="language-javascript">
@@ -161,6 +167,7 @@ exports.hash = function(pass,salt,fn){
 </pre>
 
 <pre class="language-javascript">
+<code>
 //第三步写好表单
 <form method="post" action="/login">
   <p>
@@ -175,4 +182,5 @@ exports.hash = function(pass,salt,fn){
     <input type="submit" value="Login">
   </p>
 </form>
+</code>
 </pre>
