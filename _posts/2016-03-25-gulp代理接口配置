@@ -1,3 +1,10 @@
+---
+layout: post
+title: gulp代理接口配置
+---
+
+{{ page.title }}
+================
 
 
 最近新到一家公司，构建工具是bower+gulp+nginx.
