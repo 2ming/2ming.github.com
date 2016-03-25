@@ -1,0 +1,74 @@
+
+
+最近新到一家公司，构建工具是bower+gulp+nginx.
+
+但是呢，我有不想装nginx 并且嫌弃nginx配置接口代理太麻烦，我想到我上一家公司也是接口代理的。
+
+然后我就看了下gulpfile.js配置，主要是用webserver。如下：
+ ```
+ var webServer = require('gulp-webserver');
+ 
+ // WebServer
+gulp.task('web-server', function() {
+  var config;
+  try {
+    config = require('./config'); //接口代理配置文件
+    gutil.log('load configuration file');
+  } catch(e) {
+    config = {
+      api: 'http://localhost:8082/api'
+    };
+    gutil.log('using default configuration: ', config);
+  }
+  gulp.src('./src')
+    .pipe(webServer({
+      host: '0.0.0.0',
+      fallback: 'index.html',
+      livereload: {
+        enable: true,
+        port: 8001,
+        filter: function(fileName) {
+          if (fileName.match(/\.ts$/)) {
+            return false;
+          } else if(fileName.match(/\.js\.map$/)) {
+            return false;
+          } else {
+            return true;
+          }
+        }
+      },
+      directoryListing: true,
+      port: 8000,
+      proxies:[{
+        source: '/api',
+        target: config.api 
+      }]
+    }));
+});
+
+```
+
+但是我没用这一种方法 browserSync 和 http-proxy-middleware，如下：
+
+```
+var proxyMiddleware = require('http-proxy-middleware');
+var browserSync = require('browser-sync');
+
+var proxy = proxyMiddleware('/api', {
+                target: 'https://127.0.0.1/',代理接口地址
+                changeOrigin: true
+            });
+            
+// Static server
+gulp.task('serve', function() {
+  browserSync({
+    server: {
+      baseDir: "./source/",
+      middleware: [proxy]
+    }
+  });
+  gulp.watch(["./source/**/*.html", "./source/**/*.css", "./source/**/*.js"]).on('change', reload);
+});
+```
+我也不清楚哪个好哪个不好，暂时先解决问题吧。
+如果讲述错误，还望指正。
