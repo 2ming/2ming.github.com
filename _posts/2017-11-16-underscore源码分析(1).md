@@ -19,12 +19,19 @@ _([1,2,3]).each(console.log)
 
 我们先简单的实现链式调用的功能
 
+实现 _.each([1,2,3],console.log) 是很简单的 ，直接_.each函数就搞定了
+
+关键的_().each实现思路也很简单，我们可以这么理解
+当我们返回了new _(obj),如果想调用each方法时，只要把each绑定到prototype就可以了
+我们再把传参obj传给each方法，可参考_.each.apply(_, args)
+
 <pre class="language-javascript">
 
 var _ = function(obj) {
-  if (obj instanceof _) return obj;
+  //因为new _持续调用_, 所以加入if 控制死循环
   if (!(this instanceof _)) return new _(obj);
-  this._wrapped = obj;
+  //把传入的obj参数保存起来
+  this._wrapped = obj;
 };
 
 _.each = function(obj, iteratee) {
@@ -42,7 +49,9 @@ _.prototype.each = function() {
   return _.each.apply(_, args)
 };
 
+_.each([1,2,3],console.log)
 _([1,2,3]).each(console.log)
 
 </pre>
+
 
