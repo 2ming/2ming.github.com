@@ -6,7 +6,7 @@ title: underscore源码分析
 {{ page.title }}
 ================
 
-underscore 最主要的一个特性是链式调用
+underscore 版本1.8.3 最主要的一个特性是链式调用
 
 <pre class="language-javascript">
 
