@@ -5,7 +5,7 @@ title: electron+webpack打包应用
 
 {{ page.title }}
 ================
-<img src="//wanggao421.github.com/images/20171213-1.jpeg">
+<img src="//2ming.github.com/images/20171213-1.jpeg">
 
 
 第一步：拉取<a href="https://github.com/electron/electron-quick-start" target="_blank">electron-quick-start</a>库,这里不做过多介绍，具体可参考链接<a href="http://www.jianshu.com/p/785ed0ac08ee" target="_blank">Electron + React DeskTop开发环境搭建</a>开发环境搭建
